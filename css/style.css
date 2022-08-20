@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Russo One', sans-serif;
+  font-weight: 100;
+}
+.wrapper {
+  margin: auto;
+  display: flex;
+  width: 360px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: -24px;
+}
+
+.subtitle {
+  text-align: right;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.subtitle::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: -40px;
+  width: 60%;
+  border: 1px solid black;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
