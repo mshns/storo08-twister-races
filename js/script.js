@@ -7,7 +7,7 @@ sportsmans.forEach(element => {
 
 const leaderbord = document.querySelector('.board');
 
-fetch('http://www.ipoker.com/XMLs/twister-race-week-current.xml')
+fetch('https://www.ipoker.com/XMLs/twister-race-week-current.xml')
 .then(function(resp) {
   return resp.text();
 })
