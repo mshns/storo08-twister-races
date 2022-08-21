@@ -1,3 +1,9 @@
+const time = document.querySelector('.time')
+
+const date = new Date();
+const currentTime = date.toLocaleTimeString('ru-RU', { timeZone: "Europe/Moscow", day: "numeric", month: "long", hour: "numeric", minute: "numeric" });
+time.textContent = `Лидерборд на ${currentTime} по мск.`;
+
 import sportsmans from './sportsmans.js';
 
 let arrSportsmans = [];
@@ -5,7 +11,7 @@ sportsmans.forEach(element => {
   arrSportsmans.push(element.nickname);
 })
 
-const leaderbord = document.querySelector('.board');
+const leaderbord = document.querySelector('.current-board');
 
 fetch('https://www.ipoker.com/XMLs/twister-race-week-current.xml')
 .then(function(resp) {
@@ -20,6 +26,9 @@ fetch('https://www.ipoker.com/XMLs/twister-race-week-current.xml')
     if (arrSportsmans.includes(item.getElementsByTagName('column')[1].lastChild.nodeValue)) {
       const li = document.createElement('li');
       li.classList.add('table-item');
+      if (num < 36) {
+        li.classList.add('table-item-prize');
+      }
       li.textContent = `${num}) ${item.getElementsByTagName('column')[1].lastChild.nodeValue} ➞ ${item.getElementsByTagName('column')[2].lastChild.nodeValue}`;
       num++;
       leaderbord.append(li);
@@ -29,3 +38,5 @@ fetch('https://www.ipoker.com/XMLs/twister-race-week-current.xml')
   li.textContent = `${num} - ${arrSportsmans.length}) Остальные участники вне зоны топ-250 сетевой гонки, а значит и вне зоны трекинга`;
   leaderbord.append(li);
 })
+  
+  
