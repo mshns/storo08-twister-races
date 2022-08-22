@@ -14,7 +14,20 @@ body {
 .wrapper {
   margin: auto;
   display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
   width: 360px;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .title {
@@ -41,13 +54,22 @@ body {
   display: flex;
   flex-direction: column;
   list-style: none;
+  width: 360px;
+  margin: 0 20px;
 }
 
 .table-item {
   color: grey;
   border-bottom: 1px solid rgb(0, 0, 0, .1);
+  display: flex;
+  flex-direction: column;
 }
 
 .table-item-prize {
   color: green;
+}
+
+.table-item-span {
+  color: grey;
+  text-align: right;
 }
