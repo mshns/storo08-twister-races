@@ -40,9 +40,7 @@ fetch('https://www.ipoker.com/XMLs/twister-race-week-current.xml')
 })
 
 const results = document.querySelector('.previous-board');
-
 import prizes from './prizes.js';
-console.log(prizes.step1)
 
 fetch('https://www.ipoker.com/XMLs/twister-race-week-previous.xml')
 .then(function(resp) {
@@ -99,4 +97,3 @@ fetch('https://www.ipoker.com/XMLs/twister-race-week-previous.xml')
     }
   }
 })
-  
