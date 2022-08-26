@@ -2,7 +2,7 @@ const time = document.querySelector('.time')
 
 const date = new Date();
 const currentTime = date.toLocaleTimeString('ru-RU', { timeZone: "Europe/Moscow", day: "numeric", month: "long", hour: "numeric", minute: "numeric" });
-time.textContent = `Лидерборд на ${currentTime} по мск.`;
+time.textContent = `Лидерборд на ${currentTime} мск`;
 
 import sportsmans from './sportsmans.js';
 
@@ -25,17 +25,24 @@ fetch('https://www.ipoker.com/XMLs/twister-race-week-current.xml')
   for (let item of players) {
     if (arrSportsmans.includes(item.getElementsByTagName('column')[1].lastChild.nodeValue)) {
       const li = document.createElement('li');
-      li.classList.add('table-item');
+      const span = document.createElement('span');
+      li.classList.add('table-item-leaderboard');
+      span.classList.add('table-item-span');
       if (num < 36) {
         li.classList.add('table-item-prize');
       }
-      li.textContent = `${num}) ${item.getElementsByTagName('column')[1].lastChild.nodeValue} ➞ ${item.getElementsByTagName('column')[2].lastChild.nodeValue}`;
+      li.textContent = `${num}. ${item.getElementsByTagName('column')[1].lastChild.nodeValue}`;
+      span.innerHTML = item.getElementsByTagName('column')[2].lastChild.nodeValue;
+      
+      
       num++;
       leaderbord.append(li);
+      li.append(span);
     }
   }
   const li = document.createElement('li');
-  li.textContent = `${num} - ${arrSportsmans.length}) Остальные участники вне зоны топ-250 сетевой гонки, а значит и вне зоны трекинга`;
+  li.classList.add('table-item-leaderboard');
+  li.textContent = `${num} - ${arrSportsmans.length}. Остальные участники вне зоны трекинга`;
   leaderbord.append(li);
 })
 
@@ -56,7 +63,7 @@ fetch('https://www.ipoker.com/XMLs/twister-race-week-previous.xml')
       const li = document.createElement('li');
       const span = document.createElement('span');
       li.classList.add('table-item', 'table-item-prize');
-      li.textContent = `${num}) ${item.getElementsByTagName('column')[1].lastChild.nodeValue} ➞ ${item.getElementsByTagName('column')[2].lastChild.nodeValue}`;
+      li.textContent = `${num}. ${item.getElementsByTagName('column')[1].lastChild.nodeValue} ➞ ${item.getElementsByTagName('column')[2].lastChild.nodeValue}`;
       span.classList.add('table-item-span');
       let tickets = '';
       if (num === 1) {
