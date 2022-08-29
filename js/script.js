@@ -13,7 +13,7 @@ sportsmans.forEach(element => {
 
 const leaderbord = document.querySelector('.current-board');
 
-fetch('https://www.ipoker.com/XMLs/twister-race-week-current.xml')
+fetch(`https://www.ipoker.com/XMLs/twister-race-week-current.xml?${Math.ceil(Math.random() * 1000)}`)
 .then(function(resp) {
   return resp.text();
 })
@@ -48,7 +48,7 @@ fetch('https://www.ipoker.com/XMLs/twister-race-week-current.xml')
 const results = document.querySelector('.previous-board');
 import prizes from './prizes.js';
 
-fetch('https://www.ipoker.com/XMLs/twister-race-week-previous.xml')
+fetch(`https://www.ipoker.com/XMLs/twister-race-week-previous.xml?${Math.ceil(Math.random() * 1000)}`)
 .then(function(resp) {
   return resp.text();
 })
