@@ -1343,6 +1343,10 @@ const sportsmans = [
     "nickname": "VolyaSim",
     "login": "VolyaSim"
   },
+  {
+    "nickname": "Rasp1snoy666",
+    "login": "Pappahappa"
+  },
 ]
 
 export default sportsmans;

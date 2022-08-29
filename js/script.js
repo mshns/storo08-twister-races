@@ -4,7 +4,7 @@ const date = new Date();
 const currentTime = date.toLocaleTimeString('ru-RU', { timeZone: "Europe/Moscow", day: "numeric", month: "long", hour: "numeric", minute: "numeric" });
 time.textContent = `Лидерборд на ${currentTime} мск`;
 
-import sportsmans from './sportsmans.js';
+import sportsmans from `./sportsmans.js?${Math.ceil(Math.random() * 1000)}`;
 
 let arrSportsmans = [];
 sportsmans.forEach(element => {
