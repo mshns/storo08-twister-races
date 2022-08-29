@@ -1220,8 +1220,8 @@ const sportsmans = [
     "login": "Liberator"
   },
   {
-    "nickname": "Just1now",
-    "login": "Just1now"
+    "nickname": "just1now",
+    "login": "just1now"
   },
   {
     "nickname": "freshbutter",
@@ -1334,6 +1334,14 @@ const sportsmans = [
   {
     "nickname": "firamon591",
     "login": "Babbleboy"
+  },
+  {
+    "nickname": "Armat20",
+    "login": "Armat20"
+  },
+  {
+    "nickname": "VolyaSim",
+    "login": "VolyaSim"
   },
 ]
 
