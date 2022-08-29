@@ -8,7 +8,7 @@ import sportsmans from './sportsmans.js';
 
 let arrSportsmans = [];
 sportsmans.forEach(element => {
-  arrSportsmans.push(element.nickname);
+  arrSportsmans.push(element.nickname.toLowerCase());
 })
 
 const leaderbord = document.querySelector('.current-board');
@@ -23,7 +23,7 @@ fetch('https://www.ipoker.com/XMLs/twister-race-week-current.xml')
   players = xmlDoc.getElementsByTagName('row');
   let num = 1;
   for (let item of players) {
-    if (arrSportsmans.includes(item.getElementsByTagName('column')[1].lastChild.nodeValue)) {
+    if (arrSportsmans.includes(item.getElementsByTagName('column')[1].lastChild.nodeValue.toLowerCase())) {
       const li = document.createElement('li');
       const span = document.createElement('span');
       li.classList.add('table-item-leaderboard');
@@ -32,8 +32,7 @@ fetch('https://www.ipoker.com/XMLs/twister-race-week-current.xml')
         li.classList.add('table-item-prize');
       }
       li.textContent = `${num}. ${item.getElementsByTagName('column')[1].lastChild.nodeValue}`;
-      span.innerHTML = item.getElementsByTagName('column')[2].lastChild.nodeValue;
-      
+      span.innerHTML = item.getElementsByTagName('column')[2].lastChild.nodeValue;      
       
       num++;
       leaderbord.append(li);
@@ -59,7 +58,7 @@ fetch('https://www.ipoker.com/XMLs/twister-race-week-previous.xml')
   players = xmlDoc.getElementsByTagName('row');
   let num = 1;
   for (let item of players) {
-    if (arrSportsmans.includes(item.getElementsByTagName('column')[1].lastChild.nodeValue) && num < 36) {
+    if (arrSportsmans.includes(item.getElementsByTagName('column')[1].lastChild.nodeValue.toLowerCase()) && num < 36) {
       const li = document.createElement('li');
       const span = document.createElement('span');
       li.classList.add('table-item', 'table-item-prize');
