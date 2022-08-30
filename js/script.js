@@ -1,10 +1,52 @@
+// popup
+
+const btnRegistration = document.querySelector('.registration');
+const btnRules = document.querySelector('.rules');
+const information = document.querySelector('.information');
+const infoReg = document.querySelector('.info-registration');
+const infoRules = document.querySelector('.info-rules');
+const shadow = document.querySelector('.shadow');
+const linkReg = document.querySelector('.reg-link');
+const linkRules = document.querySelector('.rules-link');
+
+btnRegistration.addEventListener('click', function() {
+  infoReg.classList.add('visible');
+  infoRules.classList.remove('visible');
+  information.classList.add('active');
+  shadow.classList.add('active');
+});
+
+btnRules.addEventListener('click', function() {
+  infoRules.classList.add('visible');
+  infoReg.classList.remove('visible');
+  information.classList.add('active');
+  shadow.classList.add('active');
+});
+
+shadow.addEventListener('click', function() {
+  information.classList.remove('active');
+  shadow.classList.remove('active');
+})
+
+linkReg.addEventListener('click', function() {
+  infoRules.classList.remove('visible');
+  infoReg.classList.add('visible');
+})
+
+linkRules.addEventListener('click', function() {
+  infoReg.classList.remove('visible');
+  infoRules.classList.add('visible');
+})
+
+// leaderboar
+
 const time = document.querySelector('.time')
 
 const date = new Date();
 const currentTime = date.toLocaleTimeString('ru-RU', { timeZone: "Europe/Moscow", day: "numeric", month: "long", hour: "numeric", minute: "numeric" });
 time.textContent = `Лидерборд на ${currentTime} мск`;
 
-import sportsmans from './sportsmans20220829.js';
+import sportsmans from './sportsmans20220831.js';
 
 let arrSportsmans = [];
 sportsmans.forEach(element => {
