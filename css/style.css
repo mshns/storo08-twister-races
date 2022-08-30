@@ -19,9 +19,28 @@ body {
 
 .header {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 128, 0, .25);
+}
+
+.nav {
+  margin-right: 120px;
+}
+
+.nav-list {
+  display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  width: 360px;
+  list-style: none;
+  padding: 0;
+}
+
+.nav-item {
+  margin-top: 8px;
+}
+
+.title-container {
+  position: relative;
 }
 
 .main {
@@ -33,6 +52,15 @@ body {
 .title {
   text-align: center;
   margin-bottom: -24px;
+}
+
+.title::before {
+  content: '\1F3C1';
+  font-size: 40px;
+  position: absolute;
+  left: -40px;
+  top: 0;
+  transform: rotate(-30deg);
 }
 
 .subtitle {
