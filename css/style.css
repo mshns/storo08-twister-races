@@ -193,6 +193,7 @@ body {
 .information {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   position: fixed;
   top: -200vh; bottom: 0; left: 0; right: 0;
@@ -295,5 +296,10 @@ body {
     font-size: 10px;
     margin: 2px;
     padding: 5px;
+  }
+  .information {
+    width: 320px;
+    height: 500px;
+    font-size: 14px;
   }
 }
