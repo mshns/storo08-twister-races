@@ -1347,6 +1347,10 @@ const sportsmans = [
     "nickname": "Rasp1snoy666",
     "login": "Pappahappa"
   },
+  {
+    "nickname": "dragon422",
+    "login": "dragon422"
+  },
 ]
 
 export default sportsmans;
