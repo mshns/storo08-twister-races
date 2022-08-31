@@ -165,28 +165,29 @@ body {
   margin-top: 20px;
 }
 
-.logo-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.logo {
+  width: 120px;
+  margin: 10px;
+}
 
+.copyright {
+  margin: 10px;
+  font-weight: 100;
 }
 
 .footer-list {
+  margin: 10px;
   list-style: none;
+  padding: 0;
 }
 
 .footer-item {
   display: inline;
-  margin: 10px;
+  margin-right: 10px;
 }
 
 .footer-item a {
-  color: green;
-}
-
-.logo {
-  width: 120px;
+  color: black;
 }
 
 .information {

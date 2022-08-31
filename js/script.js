@@ -1,3 +1,5 @@
+import sportsmans from './sportsmans20220831.js';
+
 // popup
 
 const btnRegistration = document.querySelector('.registration');
@@ -45,8 +47,6 @@ const time = document.querySelector('.time')
 const date = new Date();
 const currentTime = date.toLocaleTimeString('ru-RU', { timeZone: "Europe/Moscow", day: "numeric", month: "long", hour: "numeric", minute: "numeric" });
 time.textContent = `Лидерборд на ${currentTime} мск`;
-
-import sportsmans from './sportsmans20220831.js';
 
 let arrSportsmans = [];
 sportsmans.forEach(element => {
