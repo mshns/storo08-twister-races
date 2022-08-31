@@ -156,6 +156,40 @@ body {
   text-align: right;
 }
 
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 128, 0, .25);
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.logo {
+  width: 120px;
+  margin: 10px;
+}
+
+.copyright {
+  margin: 10px;
+  font-weight: 100;
+}
+
+.footer-list {
+  margin: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.footer-item {
+  display: inline;
+  margin-right: 10px;
+}
+
+.footer-item a {
+  color: black;
+}
+
 .information {
   display: flex;
   flex-direction: column;
