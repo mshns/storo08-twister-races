@@ -1,4 +1,5 @@
 import sportsmans from './sportsmans20220831.js';
+import prizes from './prizes220901.js';
 
 // popup
 
@@ -42,11 +43,11 @@ linkRules.addEventListener('click', function() {
 
 // leaderboar
 
-const time = document.querySelector('.time')
+const time = document.querySelector('.time');
 
 const date = new Date();
 const currentTime = date.toLocaleTimeString('ru-RU', { timeZone: "Europe/Moscow", day: "numeric", month: "long", hour: "numeric", minute: "numeric" });
-time.textContent = `Лидерборд на ${currentTime} мск`;
+time.textContent = `${currentTime} мск`;
 
 let arrSportsmans = [];
 sportsmans.forEach(element => {
@@ -87,8 +88,20 @@ fetch(`https://www.ipoker.com/XMLs/twister-race-week-current.xml?${Math.ceil(Mat
   leaderbord.append(li);
 })
 
+// results
+
+const previousWeek = document.querySelector('.previous-week')
+
+var beforeOneWeek = new Date(new Date().getTime() - 60 * 60 * 24 * 7 * 1000)
+var beforeOneWeek2 = new Date(beforeOneWeek);
+let day = beforeOneWeek.getDay()
+let diffToMonday = beforeOneWeek.getDate() - day + (day === 0 ? -6 : 1)
+let lastMonday = new Date(beforeOneWeek.setDate(diffToMonday)).toLocaleDateString('ru-RU', { timeZone: "Europe/Moscow", day: "numeric", month: "long" });
+let lastSunday = new Date(beforeOneWeek2.setDate(diffToMonday + 6)).toLocaleDateString('ru-RU', { timeZone: "Europe/Moscow", day: "numeric", month: "long" });
+
+previousWeek.textContent = lastMonday + ' - ' + lastSunday;
+
 const results = document.querySelector('.previous-board');
-import prizes from './prizes.js';
 
 fetch(`https://www.ipoker.com/XMLs/twister-race-week-previous.xml?${Math.ceil(Math.random() * 1000)}`)
 .then(function(resp) {

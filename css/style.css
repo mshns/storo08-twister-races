@@ -76,6 +76,7 @@ body {
 .nav {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 400px;
 }
@@ -109,6 +110,10 @@ body {
   justify-content: center;
 }
 
+.green {
+  color: green;
+}
+
 .board {
   display: flex;
   flex-direction: column;
@@ -117,8 +122,19 @@ body {
   margin: 0 20px;
 }
 
+.leaderboard-title {
+  color: green;
+  font-size: 20px;
+  font-weight: 100;
+  border-bottom: 2px solid green;
+  margin-bottom: 0;
+}
+
 .time,
-.previous-title {
+.previous-week {
+  font-weight: 100;
+  text-align: end;
+  margin: 0 0 10px;
   border-bottom: 1px solid rgb(0, 0, 0, .1);
 }
 
@@ -171,7 +187,7 @@ body {
 }
 
 .copyright {
-  margin: 10px;
+  margin: 10px 20px;
   font-weight: 100;
 }
 
@@ -183,7 +199,7 @@ body {
 
 .footer-item {
   display: inline;
-  margin-right: 10px;
+  margin: 5px;
 }
 
 .footer-item a {
@@ -193,14 +209,12 @@ body {
 .information {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   position: fixed;
   top: -200vh; bottom: 0; left: 0; right: 0;
   margin: auto;
   z-index: -50;
   width: 390px;
-  height: 520px;
+  height: 540px;
   color: black;
   background-color: white;
   border-radius: 20px;
@@ -258,7 +272,7 @@ body {
   background: rgba(0, 0, 0, .5);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 799px) {
   .footer {
     flex-direction: column;
   }
@@ -277,7 +291,7 @@ body {
   .subtitle::before {
     top: 50%;
     left: -10px;
-    width: 160px;
+    width: 170px;
     border: 1px solid black;
     background-color: black;
   }
@@ -294,12 +308,14 @@ body {
   }
   .button {
     font-size: 10px;
-    margin: 2px;
+    width: auto;
+    margin: 5px;
     padding: 5px;
   }
   .information {
     width: 320px;
-    height: 500px;
+    height: 400px;
+    overflow-y: scroll;
     font-size: 14px;
   }
 }
