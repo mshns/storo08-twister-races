@@ -1,4 +1,4 @@
-import sportsmans from './sportsmans20220831.js';
+import sportsmans from './sportsmans220904.js';
 import prizes from './prizes220901.js';
 
 // popup

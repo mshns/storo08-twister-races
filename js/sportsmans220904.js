@@ -852,7 +852,7 @@ const sportsmans = [
     "login": "Marevos"
   },
   {
-    "nickname": "Juvezer",
+    "nickname": "DemosfenSVV",
     "login": "Juvezer"
   },
   {
