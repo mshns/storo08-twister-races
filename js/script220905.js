@@ -1,5 +1,5 @@
-import sportsmans from './sportsmans220904.js';
-import prizes from './prizes220901.js';
+import sportsmans from './sportsmans220905.js';
+import prizes from './prizes220905.js';
 
 // popup
 
@@ -32,11 +32,13 @@ shadow.addEventListener('click', function() {
 })
 
 linkReg.addEventListener('click', function() {
+  information.scroll(0, 0);
   infoRules.classList.remove('visible');
   infoReg.classList.add('visible');
 })
 
 linkRules.addEventListener('click', function() {
+  information.scroll(0, 0);
   infoReg.classList.remove('visible');
   infoRules.classList.add('visible');
 })

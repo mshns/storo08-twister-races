@@ -1,4 +1,4 @@
-# storo08-twister-races
-Deploy: https://mshns.github.io/storo08-twister-races/
-leaderboard for 'storo08 twister races'
-- deploy: https://mshns.github.io/storo08-twister-races/
+# storo08 Twister Races
+🏁 Leaderboard 'storo08 Twister Races'
+- Deploy: https://mshns.github.io/storo08-twister-races/
+- Project: https://storo08.ru/twister-races/
