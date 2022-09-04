@@ -3,7 +3,7 @@ const prizes = {
     "step2": "4x Twister €20",
     "step3": "3x Twister €20",
     "step4": "5x Twister €10",
-    "step5": "8x Twister €5",
+    "step5": "4x Twister €10",
     "step6": "7x Twister €5",
     "step7": "6x Twister €5",
     "step8": "5x Twister €5",
