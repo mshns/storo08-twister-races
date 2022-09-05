@@ -1,4 +1,4 @@
-const sportsmansPrevious = [
+const sportsmans = [
   {
     "nickname": "rusvanya1",
     "login": "rusvanya"
@@ -828,7 +828,7 @@ const sportsmansPrevious = [
     "login": "tchubaraka"
   },
   {
-    "nickname": "ustaal",
+    "nickname": "Jenyame1",
     "login": "SMBWK"
   },
   {
@@ -1353,4 +1353,4 @@ const sportsmansPrevious = [
   },
 ]
 
-export default sportsmansPrevious;
+export default sportsmans;

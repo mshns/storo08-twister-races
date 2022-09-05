@@ -1,4 +1,5 @@
-import sportsmans from './sportsmans220905.js';
+import sportsmans from './sportsmans220906.js';
+import sportsmansPrevious from './sportsmans220905.js';
 import prizes from './prizes220905.js';
 
 // popup
@@ -13,6 +14,7 @@ const linkReg = document.querySelector('.reg-link');
 const linkRules = document.querySelector('.rules-link');
 
 btnRegistration.addEventListener('click', function() {
+  information.scroll(0, 0);
   infoReg.classList.add('visible');
   infoRules.classList.remove('visible');
   information.classList.add('active');
@@ -20,6 +22,7 @@ btnRegistration.addEventListener('click', function() {
 });
 
 btnRules.addEventListener('click', function() {
+  information.scroll(0, 0);
   infoRules.classList.add('visible');
   infoReg.classList.remove('visible');
   information.classList.add('active');
@@ -103,6 +106,11 @@ let lastSunday = new Date(beforeOneWeek2.setDate(diffToMonday + 6)).toLocaleDate
 
 previousWeek.textContent = lastMonday + ' - ' + lastSunday;
 
+let arrSportsmansPrevious = [];
+sportsmansPrevious.forEach(element => {
+  arrSportsmansPrevious.push(element.nickname.toLowerCase());
+})
+
 const results = document.querySelector('.previous-board');
 
 fetch(`https://www.ipoker.com/XMLs/twister-race-week-previous.xml?${Math.ceil(Math.random() * 1000)}`)
@@ -115,7 +123,7 @@ fetch(`https://www.ipoker.com/XMLs/twister-race-week-previous.xml?${Math.ceil(Ma
   players = xmlDoc.getElementsByTagName('row');
   let num = 1;
   for (let item of players) {
-    if (arrSportsmans.includes(item.getElementsByTagName('column')[1].lastChild.nodeValue.toLowerCase()) && num < 36) {
+    if (arrSportsmansPrevious.includes(item.getElementsByTagName('column')[1].lastChild.nodeValue.toLowerCase()) && num < 36) {
       const li = document.createElement('li');
       const span = document.createElement('span');
       li.classList.add('table-item', 'table-item-prize');
