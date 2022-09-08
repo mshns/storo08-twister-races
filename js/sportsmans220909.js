@@ -344,7 +344,7 @@ const sportsmans = [
     "login": "sanepain"
   },
   {
-    "nickname": "BillPreflop",
+    "nickname": "HANSTHUMANN",
     "login": "Survivor.es"
   },
   {
